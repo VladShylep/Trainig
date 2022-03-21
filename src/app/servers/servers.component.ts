@@ -21,5 +21,8 @@ export class ServersComponent implements OnInit {
   onCreateServer() {
     this.serverCreationService = 'server was created!';
   }
+  onUpdateServerName() {
+    
+  }
 
 }
