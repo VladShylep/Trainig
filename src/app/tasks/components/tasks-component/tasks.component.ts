@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-
+  userName = '';
+  allowClick = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onClickReset() {
+    this.userName = '';
+  }
 }
