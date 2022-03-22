@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TasksComponent } from './tasks-component/tasks.component';
+import { TasksRoutingModule } from './tasks.router.module';
 
 
 @NgModule({
@@ -8,7 +9,8 @@ import { TasksComponent } from './tasks-component/tasks.component';
     TasksComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TasksRoutingModule
   ],
   exports: [
     TasksComponent
