@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
+import { TasksModule } from './tasks/tasks.module';
+
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { ServersComponent } from './servers/servers.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule  
+    AppRoutingModule,
+    FormsModule,
+    TasksModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
