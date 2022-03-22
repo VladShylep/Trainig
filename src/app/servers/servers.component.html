@@ -1,12 +1,19 @@
 <label Server Name></label>
-<input 
-    type="text" 
+<!-- <input 
+   type="text" 
     class="form-control"
-    (input)="onUpdateServerName($event)"
->
+    (input)="onUpdateServerName($event)"> -->
+    <input 
+   type="text" 
+    class="form-control"
+    [(ngModel)]="serverName">
+    <!-- <p>{{ serverName }} </p> -->
+    
+
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"
-        (click)="onUpdateServerName($event)">Add Server</button>
+        (click)="onCreateServer()">Add Server</button>
+
         
 <p> {{ serverCreationService }} </p>
 <app-server></app-server>
