@@ -6,12 +6,15 @@ import { ServerComponent } from './components/server/server.component';
 import { ServersComponent } from './components/servers/servers.component';
 import { FormsModule } from '@angular/forms';
 
+import { DirectivesComponent } from './components/directives/directives.component';
+
 
 @NgModule({
   declarations: [
     TasksComponent,
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    DirectivesComponent
   ],
   imports: [
     CommonModule,
