@@ -2,4 +2,4 @@
 <button type="button" class="btn btn-danger" (click)="resetButton()">Zajebavsya</button>
 <p *ngIf="buttonClicked">{{ password }}</p>
 <hr>
-<p *ngFor="let date of clicks">{{ date|date: 'medium' }} {{ passwordStatus() }}</p>
+<p *ngFor="let date of clicks">{{ date.time|date: 'medium', date.log }} </p>

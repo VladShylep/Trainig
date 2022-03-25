@@ -20,7 +20,7 @@ export class DirectivesComponent implements OnInit {
   onClick() {
     this.buttonClicked = !this.buttonClicked;
     this.clicks.length += 1;
-    this.clicks.push(new Date());
+    this.clicks.push({ time: new Date(), log: 'passwordStatus()' });
   }
   passwordStatus() {
     return this.buttonClicked === true ? '-password shown' : '-password hiden';
