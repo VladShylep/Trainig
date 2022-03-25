@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
   password = 'Secret password = tuna!';
-  buttonClicked = false;
+  isContentShown: boolean = false;
   clicks = [];
 
 
@@ -18,8 +18,12 @@ export class DirectivesComponent implements OnInit {
   ngOnInit(): void {
   }
   onClick() {
-    this.buttonClicked = true;
-    this.clicks.length += 1;
+    this.isContentShown = !this.isContentShown;
+    this.clicks.push({time: new Date(), log: this.isContentShown ? 'password shown' : 'password hidden'});
+    console.log(this.clicks.length);
+  }
+  clearLog(){
+    this.clicks = [];
   }
 
 }

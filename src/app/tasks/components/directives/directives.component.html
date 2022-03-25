@@ -1,4 +1,8 @@
 <button type="button" class="btn btn-info" (click)="onClick()">Display details</button>
-<p *ngIf="buttonClicked">{{ password }}</p>
+<button type="button" class="btn btn-warning" (click)="clearLog()">Clear log</button>
+<p *ngIf="isContentShown">{{ password }}</p>
 <hr>
-<p>{{ clicks }}</p>
+<div *ngFor="let el of clicks"><div>
+    <span>{{el.time | date: 'mediumTime'}}</span>
+    <span>{{ el.log}}</span>
+</div></div>
