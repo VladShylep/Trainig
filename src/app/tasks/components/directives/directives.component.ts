@@ -18,8 +18,16 @@ export class DirectivesComponent implements OnInit {
   ngOnInit(): void {
   }
   onClick() {
-    this.buttonClicked = true;
+    this.buttonClicked = !this.buttonClicked;
     this.clicks.length += 1;
+    this.clicks.push(new Date());
+  }
+  passwordStatus() {
+    return this.buttonClicked === true ? '-password shown' : '-password hiden';
+  }
+  resetButton() {
+    this.clicks = [];
+    this.buttonClicked = false;
   }
 
 }

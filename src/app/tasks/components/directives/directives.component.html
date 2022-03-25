@@ -1,4 +1,5 @@
 <button type="button" class="btn btn-info" (click)="onClick()">Display details</button>
+<button type="button" class="btn btn-danger" (click)="resetButton()">Zajebavsya</button>
 <p *ngIf="buttonClicked">{{ password }}</p>
 <hr>
-<p>{{ clicks }}</p>
+<p *ngFor="let date of clicks">{{ date|date: 'medium' }} {{ passwordStatus() }}</p>
